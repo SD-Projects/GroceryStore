@@ -1,0 +1,58 @@
+.navbar-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+
+}
+
+.navbar-header ol{
+    padding: 0;
+    
+}
+
+.navbar-header li{
+    list-style-type: none;
+    display: inline-flex;
+    padding: 0 20px;
+    margin: 0 20px;
+    text-align: center;    
+    
+}
+
+.navbar-header a{
+    font-size: large;
+}
+
+.navbar-links{
+    color: black !important;
+    transition: 0.3s;
+}
+
+.navbar-links:hover{
+    color: whitesmoke !important;
+}
+
+.nav-login-btn a{
+    font-size: medium !important;
+    color: white !important;
+}
+
+.btn:focus{
+    background-color: #77dd77 !important;
+    box-shadow: none;
+}
+
+.navbar-dropdown-title{
+    color: black;
+    transition: all 0.3s ease 0;
+}
+
+.navbar-dropdown-title:hover{
+    color: white;
+    transition: all 0.3s ease 0;
+}
+
+.navbar-login-cart{
+    
+}
+

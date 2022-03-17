@@ -1,0 +1,11 @@
+body{
+  margin: 0;
+
+  background: rgb(215,204,193);
+  background: linear-gradient(180deg, rgba(215,204,193,1) 30%, rgba(255,255,255,1) 60%);
+  background-repeat: no-repeat;
+}
+
+.header-body-container{
+  margin-bottom: 100px;
+}

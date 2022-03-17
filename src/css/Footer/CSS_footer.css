@@ -1,0 +1,100 @@
+.footer-container{
+    
+}
+
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    list-style-type: none;
+    padding: 90px 100px 45px 100px;
+
+    background-color: rgb(196, 185, 173);
+    
+}
+
+.footer-categories li{
+    
+}
+
+.store-logo-container{
+    
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.footer-newsletter { 
+    grid-area: 1 / 4 / 2 / 5;
+
+}
+
+.subscribe-newsletter{
+    font-size: 36px;
+    text-align: center;
+}
+
+.email-input-newsletter{
+    border-radius: 90px;
+    border: none;
+    height: 60px;
+    width: 450px;
+    text-align: center;
+
+}
+
+.email-input-button{
+    box-sizing: border-box;
+    padding: 10px;
+    color: #07051a;
+    font-size: 1.2em;
+    transition: all 1s;
+    position: relative;
+}
+
+.email-newsletter-container{
+    position: relative;
+    transition: all 1s;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.newsletter-signup-btn{
+    background-color: #77dd77;
+    border: 1px solid #77dd77;
+    
+}
+
+.newsletter-signup-btn:hover{
+    background-color: #98eb98;
+    border: 1px solid #77dd77;
+    
+}
+
+.footer-categories-list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-list-header{
+    font-size: larger;
+}
+
+.category-1{
+    grid-area: 1 / 2 / 2 / 3; 
+    text-align: start;
+
+}
+
+.category-2{
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.footer-categories li{
+    list-style-type: none;
+}
+

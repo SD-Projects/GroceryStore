@@ -1,0 +1,9 @@
+.flash-items-container{
+    margin-bottom: 60px;
+}
+
+.flash-items-container img {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+}

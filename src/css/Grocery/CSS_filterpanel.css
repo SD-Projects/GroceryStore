@@ -1,0 +1,33 @@
+.filter-container{
+    
+}
+
+.filter-container:first-child{
+    width: 150px;
+
+}
+
+.filter-container ol{
+    padding-left: 0px;
+    
+}
+
+.filter-checkbox-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: start;
+    align-content: start;
+    margin-bottom: 10px;
+    
+}
+
+.checkbox{
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.checkbox-label{
+    
+}

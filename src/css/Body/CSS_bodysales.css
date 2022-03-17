@@ -1,0 +1,9 @@
+.body-sales-title{
+    border-top: 1px solid #000;
+    padding: 30px 0 20px 0;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
