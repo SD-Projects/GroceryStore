@@ -25,29 +25,33 @@ const BodySales = () => {
 
             <Container>
                 <div className="body-sales-title">
-                    <h4>Current Sales</h4>
+                    
+                    <p></p>
+                    <div className='testing'>
+                        <h4>Current Sales</h4>
+                    </div>
                     <h6> <a href="#">View all</a></h6>
                 </div>
 
-                <Row style={{ textAlign: "center" }}>
+                <div className='sales-container' style={{ textAlign: "center" }}>
 
                     {onSaleProducts.map((item) => (
                         <Col>
-                            <Figure>
+                            <Figure className='sale-figure'>
                                 <Figure.Image
-                                    width={171}
-                                    height={180}
-                                    alt="171x180"
-                                    // src={require("../../media/images/sales/Apple.png")}
+                                    style={{ width: 100, height: 100 }}
+                                    alt="Image"
+                                    src={item.imagePath}
                                 />
                                 <Figure.Caption className="text-center">
-                                    <h6>{item.productName}</h6>
+                                    <h5>{item.productName}</h5>
                                     <p>${item.price}</p>
+                                    <p style={{ color: "red" }}>Sale: {(item.price / 2).toFixed(2)}</p>
                                 </Figure.Caption>
                             </Figure>
                         </Col>
                     ))}
-                </Row>
+                </div>
 
             </Container>
         </div>

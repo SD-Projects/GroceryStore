@@ -28,6 +28,11 @@ const userSchema = new mongoose.Schema({
         required: true,
         minlength: 5
     },
+
+    shoppingCart : {
+        type: Array,
+        required: true
+    }
 })
 
 const User = mongoose.model("User", userSchema)

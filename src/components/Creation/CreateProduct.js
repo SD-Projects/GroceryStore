@@ -9,16 +9,16 @@ import Col from 'react-bootstrap/Col'
 const CreateProduct = () => {
 
     const [image, setImage] = useState({})
-    const initialFormData = ({ productName: "", productType: "", price: "", discountedPrice: "", date: "", imageFile: image })
+    const initialFormData = ({ productName: "", productType: "", price: "", discountedPrice: "", date: "", imagePath: "" })
     const [userFormData, setFormData] = useState(initialFormData)
 
-    const uploadPicture = (e) => {
-        setImage({
-            picturePreview: URL.createObjectURL(e.target.files[0]),
-            pictureAsFile: e.target.files[0],
-        });
-        console.log(image)
-    };
+    // const uploadPicture = (e) => {
+    //     setImage({
+    //         picturePreview: URL.createObjectURL(e.target.files[0]),
+    //         pictureAsFile: e.target.files[0],
+    //     });
+    //     console.log(image)
+    // };
 
     const formValidation = () => {
 
@@ -47,12 +47,14 @@ const CreateProduct = () => {
 
         if (validation === true){
             var formData = new FormData
-            formData.append("imageFile", image.pictureAsFile)
+            // formData.append("imageFile", image.pictureAsFile)
             formData.append("productName", userFormData.productName)
             formData.append("productType", userFormData.productType)
             formData.append("price", userFormData.price)
             formData.append("discountedPrice", userFormData.discountedPrice)
             formData.append("date", userFormData.date)
+            formData.append("imagePath", userFormData.imagePath)
+            // console.log(image.pictureAsFile)
     
             fetch("/products/upload", {
     
@@ -67,7 +69,6 @@ const CreateProduct = () => {
     const handleInputChange = (e) => {
         setFormData({ ...userFormData, [e.target.name]: e.target.value })
     }
-
 
     return (
         <div>
@@ -116,12 +117,20 @@ const CreateProduct = () => {
                         </Form.Group>
                     </Row>
 
-
                     <Row className="mb-3">
+                        <Form.Group className="mb-3" controlId="formDiscountedPrice">
+                            <Form.Control onChange={handleInputChange} type="name" placeholder="Image path" name="imagePath" />
+                            <Form.Text className="text-muted">
+                            </Form.Text>
+                        </Form.Group>
+                    </Row>
+
+
+                    {/* <Row className="mb-3">
                         <Form.Group className="mb-3" controlId="formFile">
                             <Form.Control onChange={uploadPicture} type="file" placeholder="File" name="imageFile" />
                         </Form.Group>
-                    </Row>
+                    </Row> */}
 
                     <div className="btn-submit">
                         <Button variant="primary" type="submit">

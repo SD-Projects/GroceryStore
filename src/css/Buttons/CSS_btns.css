@@ -1,0 +1,14 @@
+.logout-btn{
+    color: "white";
+    border-radius: 15;
+    padding-left: 20;
+    padding-right: 20;
+    padding-top: 5;
+    background-color: #77dd77;
+    border: "none";
+}
+
+.nav-login-btn a{
+    font-size: medium !important;
+    color: white !important;
+}

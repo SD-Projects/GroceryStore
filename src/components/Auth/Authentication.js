@@ -1,6 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Navigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container'
+import decode from 'jwt-decode';
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
@@ -10,7 +12,7 @@ import "../../css/Auth/CSS_signup.css"
 
 const Authentication = () => {
 
-    const initialFormData = ({ firstname: "", lastname: "", email: "", password: "" })
+    const initialFormData = ({ firstname: "", lastname: "", email: "", password: "", shoppingCart: [] })
 
     const [isLoggingIn, setIsLoggingIn] = useState(true)
     const [formData, setFormData] = useState(initialFormData)
@@ -23,17 +25,21 @@ const Authentication = () => {
         e.preventDefault()
 
         if (isLoggingIn === true) {
-           await fetch("/users/login",{
+            await fetch("/users/login", {
 
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                method: "POST", 
+                method: "POST",
                 body: JSON.stringify(formData)
 
             })
-            .then(res => res.json())
-            
+                .then(res => res.json())
+                .then((json) => {
+                    localStorage.setItem("token", JSON.stringify(json.token));
+                    localStorage.setItem("shoppingCart", JSON.stringify(json.shoppingCart))
+                    localStorage.setItem("user", JSON.stringify(json.user))
+            } )
         }
 
         else if (isLoggingIn === false) {
@@ -46,6 +52,7 @@ const Authentication = () => {
                 },
             })
                 .then(res => res.json())
+
         }
     }
 

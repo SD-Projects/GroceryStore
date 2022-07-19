@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
 import "./css/CSS_flashitems.css"
 import "./css/CSS_mainnav-bar.css"
+import "./css/Responsive/CSS_responsive.css"
 import { useState, useEffect } from 'react';
 import decode from 'jwt-decode';
 import HeaderBanners from './components/HeaderBanners';
@@ -11,37 +12,36 @@ import BodyHeader from './components/BodyContent/BodyHeader';
 import BodySales from './components/BodyContent/BodySales';
 import BodyCategories from './components/BodyContent/BodyCategories';
 import Footer from "./components/Footer/Footer.js"
+import Recipes from './components/BodyContent/Recipes';
 
 function App() {
 
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('auth-token')))
-  console.log(user)
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')));
+  const [info, setInfo] = useState()
+
+  const decodeToken = () => {
+
+    if (user !== null) {
+      // setInfo(decode(user))
+      // console.log(decode(user.token))
+
+    }
+  }
 
   useEffect(() => {
+    if (localStorage.getItem("user") !== "" || localStorage.getItem("user") !== undefined) {
+      decodeToken()
 
-    const token = user?.token
-
-    if (token) {
-      const decodedInfo = decode(token)
-      console.log(token)
     }
-    console.log(token)
-
-    setUser(JSON.parse(localStorage.getItem('auth-token')));
   }, [])
-
 
   return (
     <div className="App">
 
       <div className="mainnav-bar">
-        <MainNavBar ></MainNavBar>
+        <MainNavBar info={info} ></MainNavBar>
       </div>
       {/* <CategoryBar></CategoryBar> */}
-
-      <div class="flash-items-container">
-        <HeaderBanners></HeaderBanners>
-      </div>
 
       <div className="header-body-container">
         <BodyHeader></BodyHeader>
@@ -53,6 +53,10 @@ function App() {
 
       <div>
         <BodySales></BodySales>
+      </div>
+
+      <div>
+        <Recipes></Recipes>
       </div>
 
       <div>

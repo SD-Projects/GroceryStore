@@ -1,0 +1,35 @@
+.item-card{
+    height: 130px;
+}
+
+.list-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: normal;
+    align-content: normal;
+}
+
+.contents-container {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+  
+.image-container img{
+  max-width: 120px;
+}
+
+.btnItem{
+    background-color: azure;
+    color: black;
+    height: 15px;
+}
+
+.product-name{
+  font-weight: bolder;
+}

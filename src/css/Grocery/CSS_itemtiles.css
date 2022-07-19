@@ -2,9 +2,18 @@
     width: 13rem;
     height: 100%;
     margin: 5px;
+    border-radius: 15px;
 }
 
 .btn{
     
     height: 35px;
+}
+
+.card-container{
+    margin: 12px;
+}
+
+.card-footer{
+    background-color: transparent;
 }

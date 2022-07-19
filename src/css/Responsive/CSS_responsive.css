@@ -1,0 +1,91 @@
+.header-buttons-responsive{
+    display: none;
+}
+
+@media screen and (max-width: 500px){
+
+    .navbar-header{
+        display: none;
+    }
+    
+    .header-buttons{
+        display: none;
+    }
+
+    .responsive-navbar{
+        text-align: center;
+        display: block;
+
+    }
+
+    .responsive-blob{
+        display: none;
+    }
+
+    .carousel{
+        width: 100%;
+    }
+
+    .carousel img{
+        width: 280px !important;
+        height: 280px !important;
+        text-align: center;
+    }
+
+    .header-phrase{
+        text-align: center !important;
+    }
+
+    .shop-now-btn-container{
+        margin: 0 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .card-img img{
+        z-index: 10 !important;
+    }
+
+    .card{
+        width: 100% !important;
+        
+    }
+
+    .card-img{
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .category-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: normal;
+        align-items: normal;
+        align-content: normal;
+    }
+
+    .responsive-category-description{
+        display: none;
+    }
+
+    .recipe-container{
+        flex-wrap: wrap !important;
+    }
+    
+    .footer-store-description-container{
+        display: none !important;
+    }
+
+    #responsive-newsletter{
+        display: none;
+    }
+    
+    .email-input-newsletter{
+        width: 100% !important;
+        height: 50px !important;
+    }
+
+    .subscribe-newsletter{
+        font-size: 24px !important;
+    }
+}

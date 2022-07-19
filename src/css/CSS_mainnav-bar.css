@@ -32,11 +32,6 @@
     color: whitesmoke !important;
 }
 
-.nav-login-btn a{
-    font-size: medium !important;
-    color: white !important;
-}
-
 .btn:focus{
     background-color: #77dd77 !important;
     box-shadow: none;

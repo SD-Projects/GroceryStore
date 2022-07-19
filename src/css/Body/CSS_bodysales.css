@@ -3,7 +3,38 @@
     padding: 30px 0 20px 0;
     margin-top: 40px;
     display: flex;
-    align-items: center;
-
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.testing{
+    text-align: center;
+    
+}
+
+.sale-figure{
+    width: 5rem;
+}
+
+.sales-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    align-content: normal;
+    margin: auto;
+}
+
+@media screen and (max-width: 500px) {
+    .sales-container{
+        width: 200px !important;
+    }
+
+    .sale-figure{
+        width: 5rem !important;
+    }
 }

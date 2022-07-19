@@ -2,64 +2,71 @@ import React from 'react'
 import ItemTiles from './ItemTiles'
 import "../../../css/Grocery/CSS_filterpanel.css"
 
-const FilterPanel = () => {
-  return (
-    <div className="filter-container">
+const FilterPanel = ({ doFilter }) => {
 
-        <p>Categories</p>
+    const handleChecked = (e) =>{
+        let isChecked = e.target.value
+        console.log(isChecked)
+    }
 
-        <ol>
-            <div >
-                
-                <div className="filter-checkbox-container">
-                    <input type="checkbox" className="checkbox"></input>
-                    <div className="checkbox-label">
-                        <span>Dairy</span>
-                    </div>
-                </div>
-                
-                <div className="filter-checkbox-container">
-                    <input type="checkbox" className="checkbox"></input>
-                    <div className="checkbox-label">
-                        <span>Fruit</span>
-                    </div>
-                </div>
-                
-                <div className="filter-checkbox-container">
-                    <input type="checkbox" className="checkbox"></input>
-                    <div className="checkbox-label">
-                        <span>Vegetable</span>
-                    </div>
-                </div>
-                
-                <div className="filter-checkbox-container">
-                    <input type="checkbox" className="checkbox"></input>
-                    <div className="checkbox-label">
-                        <span>Meat</span>
-                    </div>
-                </div>
-                
-                <div className="filter-checkbox-container">
-                    <input type="checkbox" className="checkbox"></input>
-                    <div className="checkbox-label">
-                        <span>Poultry</span>
-                    </div>
-                </div>
-                
-                <div className="filter-checkbox-container">
-                    <input type="checkbox" className="checkbox"></input>
-                    <div className="checkbox-label">
-                        <span>Sale</span>
-                    </div>
-                </div>
-                
-               
+    return (
 
-            </div>
-        </ol>
+        <div className="filter-container">
 
-    </div>
-  )
+            <p>Categories</p>
+
+            <ol>
+                <div >
+
+                    <div className="filter-checkbox-container">
+                        <input id="dairy" value={"dairy"} type="checkbox" onChange={handleChecked} className="checkbox"></input>
+                        <div className="checkbox-label">
+                            <span>Dairy</span>
+                        </div>
+                    </div>
+
+                    <div className="filter-checkbox-container">
+                        <input id="fruit" value={"fruit"} type="checkbox" onChange={handleChecked} className="checkbox"></input>
+                        <div className="checkbox-label">
+                            <span>Fruit</span>
+                        </div>
+                    </div>
+
+                    <div className="filter-checkbox-container">
+                        <input id="vegetable" value={"vegetable"} type="checkbox" className="checkbox"></input>
+                        <div className="checkbox-label">
+                            <span>Vegetable</span>
+                        </div>
+                    </div>
+
+                    <div className="filter-checkbox-container">
+                        <input id="meat" value={"meat"} type="checkbox" className="checkbox"></input>
+                        <div className="checkbox-label">
+                            <span>Meat</span>
+                        </div>
+                    </div>
+
+                    <div className="filter-checkbox-container">
+                        <input id="poultry" value={"poultry"} type="checkbox" className="checkbox"></input>
+                        <div className="checkbox-label">
+                            <span>Poultry</span>
+                        </div>
+                    </div>
+
+                    <div className="filter-checkbox-container">
+                        <input id="sale" value={"sale"} type="checkbox" className="checkbox"></input>
+                        <div className="checkbox-label">
+                            <span>Sale</span>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </ol>
+
+        </div>
+    )
 }
 
 export default FilterPanel

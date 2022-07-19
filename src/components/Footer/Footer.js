@@ -42,7 +42,7 @@ const Footer = () => {
 
                 <div className="footer-newsletter">
 
-                    <p>Stay up to date with our latest sales</p>
+                    <p id="responsive-newsletter">Stay up to date with our latest sales</p>
                     <p className="subscribe-newsletter">Subcribe to our Newsletter!</p>
 
                     <div className="email-newsletter-container">

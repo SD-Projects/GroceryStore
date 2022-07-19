@@ -28,9 +28,8 @@ const productSchema = new mongoose.Schema({
         required: false
     },
 
-    imageFile:{
-        data: Buffer,
-        contentType: String, 
+    imagePath:{
+        type: String, 
         required: false
     }
 })

@@ -1,0 +1,39 @@
+.recipe-container{
+    margin: auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: normal;
+    align-content: normal;
+}
+
+.recipe-title{
+    text-align: center;
+}
+
+.recipe{
+    margin: 0px 20px 15px 20px;
+    border: 1px solid rgb(134, 134, 134);
+}
+
+.recipe-body{
+    width: 100%;
+    height: 100%;
+}
+
+.recipe-body img{
+    max-width: 250px;
+    height: 250px;
+}
+
+.recipe-information{
+
+}
+
+.recipe-title{
+    font-size: larger;
+    font-weight: 400;
+}

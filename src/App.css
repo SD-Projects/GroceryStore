@@ -9,3 +9,10 @@ body{
 .header-body-container{
   margin-bottom: 100px;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}

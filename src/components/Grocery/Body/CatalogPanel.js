@@ -2,11 +2,11 @@ import React from 'react'
 import ItemTiles from './ItemTiles'
 import "../../../css/Grocery/CSS_catalogpanel.css"
 
-const CatalogPanel = ({ items }) => {
+const CatalogPanel = ({ items, info }) => {
 
   return (
-    <div >
-      <ItemTiles items={items}></ItemTiles>
+    <div>
+      <ItemTiles info={info} items={items}></ItemTiles>
     </div>
   )
 }
