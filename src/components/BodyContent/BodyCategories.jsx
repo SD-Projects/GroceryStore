@@ -5,7 +5,7 @@ import "../../css/Body/CSS_bodycategory.css"
 const BodyCategories = () => {
     return (
         <div>
-            
+
         </div>
     )
 }

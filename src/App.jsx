@@ -13,6 +13,7 @@ import BodySales from './components/BodyContent/BodySales';
 import BodyCategories from './components/BodyContent/BodyCategories';
 import Footer from "./components/Footer/Footer.jsx"
 import Recipes from './components/BodyContent/Recipes';
+import Main from './components/Main/Main';
 
 // https://ninetheme.com/themes/crisop/
 
@@ -45,25 +46,12 @@ function App() {
       </div>
       {/* <CategoryBar></CategoryBar> */}
 
-      <div className="header-body-container">
-        <BodyHeader></BodyHeader>
-      </div>
+      <Main></Main>
 
-      <div>
-        <BodyCategories></BodyCategories>
-      </div>
-
-      <div>
-        <BodySales></BodySales>
-      </div>
-
-      <div>
-        <Recipes></Recipes>
-      </div>
-
-      <div>
-        <Footer></Footer>
-      </div>
+      <BodyCategories></BodyCategories>
+      <BodySales></BodySales>
+      <Recipes></Recipes>
+      <Footer></Footer>
 
     </div>
   );
