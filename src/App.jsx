@@ -11,8 +11,10 @@ import CategoryBar from './components/Navbar/CategoryBar';
 import BodyHeader from './components/BodyContent/BodyHeader';
 import BodySales from './components/BodyContent/BodySales';
 import BodyCategories from './components/BodyContent/BodyCategories';
-import Footer from "./components/Footer/Footer.js"
+import Footer from "./components/Footer/Footer.jsx"
 import Recipes from './components/BodyContent/Recipes';
+
+// https://ninetheme.com/themes/crisop/
 
 function App() {
 

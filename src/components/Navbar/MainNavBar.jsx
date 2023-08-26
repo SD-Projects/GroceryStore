@@ -15,7 +15,6 @@ const MainNavBar = ({ info }) => {
     user = JSON.parse(localStorage.user).name
   }
 
-
   const [toggleSidebar, setToggleSidebar] = useState(false)
 
   const openSideCart = () => {

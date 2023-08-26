@@ -12,7 +12,7 @@ const Recipes = () => {
                 <div className='recipe'>
 
                     <div className='recipe-body'>
-                        <img src={require('../../media/images/recipes/chickenbowl.jpg')}></img>
+                        {/* <img src={require('../../media/images/recipes/chickenbowl.jpg')}></img> */}
 
                         <div className='recipe-information'>
                             <p className='recipe-title'>Chicken Bowl</p>
@@ -24,7 +24,7 @@ const Recipes = () => {
                 <div className='recipe' style={{width: 250}}>
 
                     <div className='recipe-body'>
-                        <img src={require('../../media/images/recipes/pancakes.jpg')} style={{width: 250}}></img>
+                        {/* <img src={require('../../media/images/recipes/pancakes.jpg')} style={{width: 250}}></img> */}
 
                         <div className='recipe-information'>
                             <p className='recipe-title'>Fluffy pancakes</p>
@@ -36,7 +36,7 @@ const Recipes = () => {
                 <div className='recipe'>
 
                     <div className='recipe-body'>
-                        <img src={require('../../media/images/recipes/dumplings.jpg')}></img>
+                        {/* <img src={require('../../media/images/recipes/dumplings.jpg')}></img> */}
 
                         <div className='recipe-information'>
                             <p className='recipe-title'>Dumplings</p>
