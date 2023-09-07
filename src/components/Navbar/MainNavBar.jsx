@@ -1,8 +1,8 @@
 import "../../css/CSS_mainnav-bar.css"
 import { useState, useEffect } from "react";
 import React from 'react'
-import { Button, NavDropdown, } from "react-bootstrap"
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { BsTelephone } from "react-icons/bs";
+import { CiDiscount1 } from "react-icons/ci"
 import jwt_decode from "jwt-decode";
 import LogOutBtn from "../Buttons/LogOutBtn";
 import LogInBtn from "../Buttons/LogInBtn";
@@ -22,63 +22,54 @@ const MainNavBar = ({ info }) => {
   }
 
   return (
-    <div>
+    <>
+      <div className="w-3/4 h-20 bg-green-900 rounded-md mx-auto pl-5 flex justify-between">
+        <div className="flex items-center	h-full">
+          <div className="pr-8">
+            <button className="text-white bg-orange-400 text-xs py-2 px-2 rounded-sm">CATEGORIES</button>
+          </div>
 
-      <nav className="navbar-header responsive-navbar">
-        <h3>Local Grocer</h3>
-
-        <ol className="header-buttons-responsive">
-          <NavDropdown title="Menu">
-          <NavDropdown.Item href="/" className="navbar-links">Home</NavDropdown.Item>
-            <NavDropdown title={<span className="navbar-dropdown-title">Our Products  </span>} id="basic-nav-dropdown">
-              <NavDropdown.Item href="/grocery">Meat</NavDropdown.Item>
-              <NavDropdown.Item href="/grocery">Fish</NavDropdown.Item>
-              <NavDropdown.Item href="/grocery">Vegetables</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/grocery">Current Specials</NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown.Item href="/" className="navbar-links">Contact</NavDropdown.Item>
-          </NavDropdown>
+          <ol className="text-xs text-white list-none flex mb-0">
+            <li className="mr-5">HOME</li>
+            <li className="mr-5">SHOP</li>
+            <li className="mr-5">PRODUCTS</li>
+            <li className="mr-5">CONTACT</li>
           </ol>
+        </div>
 
-          <ol className="header-buttons">
-          <li> <a href="/" className="navbar-links">Home</a></li>
-          <li>
-            <NavDropdown title={<span className="navbar-dropdown-title">Our Products  </span>} id="basic-nav-dropdown">
-              <NavDropdown.Item href="/grocery">Meat</NavDropdown.Item>
-              <NavDropdown.Item href="/grocery">Fish</NavDropdown.Item>
-              <NavDropdown.Item href="/grocery">Vegetables</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/grocery">Current Specials</NavDropdown.Item>
-            </NavDropdown>
-          </li>
-          <li> <a href="#" className="navbar-links">Contact</a></li>
-        </ol>
-
-        <div className="navbar-login-cart">
-
-          {user !== undefined ?
-            <div>
-              <p>{user}</p>
-              <LogOutBtn >Logout</LogOutBtn>
-
-              <Button onClick={openSideCart} className="navbar-cart-btn" style={{ paddingTop: 0, backgroundColor: "transparent", color: "black", border: "none" }}>
-                <AiOutlineShoppingCart size={25}></AiOutlineShoppingCart>
-              </Button>
+        <div className="flex items-center	h-full">
+          <div className="flex flex-row pr-5">
+            <div className="flex">
+              <BsTelephone size={"1.5em"} color="white" />
+              <div className="flex flex-col">
+                <span className="text-amber-500 text-xs">Call Anytime</span>
+                <span className="text-white text-sm">800 300 2323</span>
+              </div>
             </div>
-            :
-            <div>
-              <a href="/login">
-                <LogInBtn className="nav-login-btn"> Log in </LogInBtn>
-              </a>
-            </div>
-          }
+          </div>
 
-          {toggleSidebar ? <SideBarCart info={info} openSideCart={openSideCart}></SideBarCart> : null}
+          <div className="flex flex-row pr-5">
+            <div className="flex">
+              <div className="flex flex-col">
+                <span className="text-amber-500 text-xs">Your Location</span>
+                <span className="text-white text-sm">Select a location</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-green-600 h-full w-52 rounded-r-md">
+            <div className="flex items-center h-full pl-8">
+              <CiDiscount1 size={"1.5em"} color="white" />
+              <div className="flex flex-col">
+                <span className="text-amber-500 text-xs">Only This Weekend</span>
+                <span className="text-white text-sm">Super Discount</span>
+              </div>
+            </div>
+          </div>
 
         </div>
-      </nav>
-    </div>
+      </div>
+    </>
   )
 }
 

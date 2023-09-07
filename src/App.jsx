@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
 import "./css/CSS_flashitems.css"
 import "./css/CSS_mainnav-bar.css"
@@ -13,7 +12,7 @@ import BodySales from './components/BodyContent/BodySales';
 import BodyCategories from './components/BodyContent/BodyCategories';
 import Footer from "./components/Footer/Footer.jsx"
 import Recipes from './components/BodyContent/Recipes';
-import Main from './components/Main/Main';
+import MainGrid from './components/Main/MainGrid';
 
 // https://ninetheme.com/themes/crisop/
 
@@ -39,19 +38,16 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className="">
 
-      <div className="mainnav-bar">
-        <MainNavBar info={info} ></MainNavBar>
-      </div>
-      {/* <CategoryBar></CategoryBar> */}
-
-      <Main></Main>
+      <MainNavBar info={info} ></MainNavBar>
+      <MainGrid></MainGrid>
+{/*   <Main></Main>
 
       <BodyCategories></BodyCategories>
       <BodySales></BodySales>
       <Recipes></Recipes>
-      <Footer></Footer>
+      <Footer></Footer> */}
 
     </div>
   );
