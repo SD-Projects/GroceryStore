@@ -1,19 +1,23 @@
+import tile1 from "../../media/images/main/tile1.png"
+import tile2 from "../../media/images/main/tile2.png"
+import tile3 from "../../media/images/main/tile3.png"
+
 const MainTiles = () => {
 
     return (
-        <div className="flex flex-row w-3/4 mx-auto">
-            <div className="pr-3 w-2/6">
-                <img className="w-full rounded-md" src="https://ninetheme.com/themes/crisop/wp-content/uploads/2022/03/17.png" />
+        <div className="flex flex-row w-4/5 h-64 mx-auto">
+            <div className="flex-1">
+                <img className="w-full h-full rounded-md object-cover" src={tile1} />
 
             </div>
 
-            <div className="pr-3 w-2/6">
-                <img className="w-full rounded-md" src="https://ninetheme.com/themes/crisop/wp-content/uploads/2022/03/17.png" />
+            <div className="px-3 flex-1">
+                <img className="w-full h-full rounded-md object-cover" src={tile2} />
 
             </div>
 
-            <div className="w-2/6">
-                <img className="w-full rounded-md" src="https://ninetheme.com/themes/crisop/wp-content/uploads/2022/03/17.png" />
+            <div className="flex-1">
+                <img className="w-full h-full rounded-md object-fill" src={tile3} />
 
             </div>
         </div>

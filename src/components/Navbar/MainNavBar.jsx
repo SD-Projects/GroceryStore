@@ -23,7 +23,7 @@ const MainNavBar = ({ info }) => {
 
   return (
     <>
-      <div className="w-3/4 h-20 bg-green-900 rounded-md mx-auto pl-5 flex justify-between">
+      <div className="w-4/5 h-20 bg-green-900 rounded-md mx-auto pl-5 flex justify-between">
         <div className="flex items-center	h-full">
           <div className="pr-8">
             <button className="text-white bg-orange-400 text-xs py-2 px-2 rounded-sm">CATEGORIES</button>
