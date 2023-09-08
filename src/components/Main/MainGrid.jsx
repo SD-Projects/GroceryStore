@@ -8,7 +8,7 @@ const Main = () => {
     return (
         <>
         
-            <div className="flex flex-row w-4/5 mx-auto py-5 h-1/2">
+            <div className="flex flex-row w-4/5 mx-auto py-5 ">
                 <SlidingTile></SlidingTile>
                 <FreshGreens></FreshGreens>
             </div>
