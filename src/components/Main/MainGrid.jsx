@@ -8,7 +8,7 @@ const Main = () => {
     return (
         <>
         
-            <div className="flex flex-row w-4/5 mx-auto py-5 ">
+            <div className="flex flex-row w-4/5 mx-auto py-5 max-sm:w-full max-sm:flex-col">
                 <SlidingTile></SlidingTile>
                 <FreshGreens></FreshGreens>
             </div>
@@ -17,7 +17,7 @@ const Main = () => {
             <MainTiles></MainTiles>
 
             {/* Long tile */}
-            <MainLongTile></MainLongTile>
+            {/* <MainLongTile></MainLongTile> */}
         </>
     )
 

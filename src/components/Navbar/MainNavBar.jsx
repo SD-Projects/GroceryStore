@@ -22,8 +22,8 @@ const MainNavBar = ({ info }) => {
   }
 
   return (
-    <>
-      <div className="w-4/5 h-20 bg-green-900 rounded-md mx-auto pl-5 flex justify-between">
+    <div className="p-2 max-sm:hidden">
+      <div className="w-4/5 h-20 px-2 bg-green-900 rounded-md mx-auto flex justify-between">
         <div className="flex items-center	h-full">
           <div className="pr-8">
             <button className="text-white bg-orange-400 text-xs py-2 px-2 rounded-sm">CATEGORIES</button>
@@ -40,7 +40,9 @@ const MainNavBar = ({ info }) => {
         <div className="flex items-center	h-full">
           <div className="flex flex-row pr-5">
             <div className="flex">
-              <BsTelephone size={"1.5em"} color="white" />
+              <div className="mr-3">
+                <BsTelephone size={"1.5em"} color="white" />
+              </div>
               <div className="flex flex-col">
                 <span className="text-amber-500 text-xs">Call Anytime</span>
                 <span className="text-white text-sm">800 300 2323</span>
@@ -66,10 +68,9 @@ const MainNavBar = ({ info }) => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
